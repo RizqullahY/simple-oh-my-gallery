@@ -14,6 +14,8 @@ async function loadImages() {
       const img = document.createElement("img");
       img.src = file.download_url;
       img.loading = "lazy";
+      img.className =
+        "w-full mb-4 rounded-xl shadow-md hover:scale-105 transition-transform duration-300";
       gallery.appendChild(img);
     }
   });

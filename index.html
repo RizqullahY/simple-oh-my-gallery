@@ -1,22 +1,16 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery</title>
-  <style>
-    img {
-      width: 200px;
-      margin: 10px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <h1>Gallery</h1>
-  <div id="gallery"></div>
-  <script src="script.js"></script>
+<body class="bg-gray-100 min-h-screen">
+  <h1 class="text-4xl font-bold text-center py-6">Gallery</h1>
+  <div id="gallery"
+       class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 px-4">
+  </div>
+  <script src="js/load-image.js"></script>
 </body>
 </html>
