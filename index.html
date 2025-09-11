@@ -4,13 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/src/output.css">
 </head>
-<body class="bg-gray-100 min-h-screen">
-  <h1 class="text-4xl font-bold text-center py-6">Gallery</h1>
+<body class="min-h-screen bg-[url('/src/bg_mb_01.jpg')] md:bg-[url('/src/bg_pc_01.jpg')] bg-cover bg-center bg-fixed bg-black/60 bg-blend-overlay">
+  
+  <h1 class="text-5xl font-extrabold text-center py-6 font-mono tracking-wide">
+    <span class="inline-block text-white hover:text-black hover:bg-white transition px-2">O</span>
+    <span class="inline-block text-white hover:text-black hover:bg-white transition px-2">H</span>
+    
+    <span class="inline-block text-white hover:text-black hover:bg-white transition px-2"></span>
+    
+    <span class="inline-block text-white hover:text-black hover:bg-white transition px-2">M</span>
+    <span class="inline-block text-white hover:text-black hover:bg-white transition px-2">Y</span>
+    
+    <span class="inline-block text-white hover:text-black hover:bg-white transition px-2"></span>
+
+    <span class="inline-block text-white hover:text-black hover:bg-white transition px-2">G</span>
+    <span class="inline-block text-white hover:text-black hover:bg-white transition px-2">A</span>
+    <span class="inline-block text-white hover:text-black hover:bg-white transition px-2">L</span>
+    <span class="inline-block text-white hover:text-black hover:bg-white transition px-2">L</span>
+    <span class="inline-block text-white hover:text-black hover:bg-white transition px-2">E</span>
+    <span class="inline-block text-white hover:text-black hover:bg-white transition px-2">R</span>
+    <span class="inline-block text-white hover:text-black hover:bg-white transition px-2">Y</span>
+  </h1>
+  
+  
   <div id="gallery"
-       class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 px-4">
+       class="columns-2 sm:columns-3 md:columns-4 lg:columns-5 gap-3 px-3">
   </div>
+  
   <script src="js/load-image.js"></script>
 </body>
 </html>
