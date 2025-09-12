@@ -7,15 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-500: oklch(63.7% 0.237 25.331);
-    --color-purple-500: oklch(62.7% 0.265 303.9);
-    --color-pink-500: oklch(65.6% 0.241 354.308);
-    --color-gray-100: oklch(96.7% 0.003 264.542);
-    --color-gray-200: oklch(92.8% 0.006 264.531);
-    --color-gray-300: oklch(87.2% 0.01 258.338);
-    --color-gray-400: oklch(70.7% 0.022 261.325);
-    --color-gray-500: oklch(55.1% 0.027 264.364);
-    --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -27,7 +18,6 @@
     --font-weight-extrabold: 800;
     --tracking-wide: 0.025em;
     --radius-lg: 0.5rem;
-    --radius-xl: 0.75rem;
     --drop-shadow-lg: 0 4px 4px rgb(0 0 0 / 0.15);
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -193,9 +183,6 @@
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
-  .inline-block {
-    display: inline-block;
-  }
   .table {
     display: table;
   }
@@ -233,8 +220,17 @@
       background-color: color-mix(in oklab, var(--color-black) 60%, transparent);
     }
   }
-  .bg-\[url\(\'\/src\/bg_mb_01\.jpg\'\)\] {
-    background-image: url('/src/bg_mb_01.jpg');
+  .bg-\[url\(\'\.\/simple-oh-my-gallery\/src\/bg_mb_01\.jpg\'\)\] {
+    background-image: url('./simple-oh-my-gallery/src/bg_mb_01.jpg');
+  }
+  .bg-\[url\(\'\.\/simple-oh-my-gallerysrc\/bg_mb_01\.jpg\'\)\] {
+    background-image: url('./simple-oh-my-gallerysrc/bg_mb_01.jpg');
+  }
+  .bg-\[url\(\'\.\/src\/bg_mb_01\.jpg\'\)\] {
+    background-image: url('./src/bg_mb_01.jpg');
+  }
+  .bg-\[url\(\'\/simple-oh-my-gallery\/src\/bg_mb_01\.jpg\'\)\] {
+    background-image: url('/simple-oh-my-gallery/src/bg_mb_01.jpg');
   }
   .bg-cover {
     background-size: cover;
@@ -245,9 +241,6 @@
   .bg-center {
     background-position: center;
   }
-  .px-2 {
-    padding-inline: calc(var(--spacing) * 2);
-  }
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
   }
@@ -257,28 +250,13 @@
   .text-center {
     text-align: center;
   }
-  .font-mono {
-    font-family: var(--font-mono);
-  }
   .text-4xl {
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
-  .text-5xl {
-    font-size: var(--text-5xl);
-    line-height: var(--tw-leading, var(--text-5xl--line-height));
-  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
-  }
-  .font-extrabold {
-    --tw-font-weight: var(--font-weight-extrabold);
-    font-weight: var(--font-weight-extrabold);
-  }
-  .tracking-wide {
-    --tw-tracking: var(--tracking-wide);
-    letter-spacing: var(--tracking-wide);
   }
   .text-white {
     color: var(--color-white);
@@ -333,20 +311,6 @@
       }
     }
   }
-  .hover\:bg-white {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-white);
-      }
-    }
-  }
-  .hover\:text-black {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-black);
-      }
-    }
-  }
   .sm\:columns-3 {
     @media (width >= 40rem) {
       columns: 3;
@@ -357,9 +321,19 @@
       columns: 4;
     }
   }
-  .md\:bg-\[url\(\'\/src\/bg_pc_01\.jpg\'\)\] {
+  .md\:bg-\[url\(\'\.\/simple-oh-my-gallery\/src\/bg_pc_01\.jpg\'\)\] {
     @media (width >= 48rem) {
-      background-image: url('/src/bg_pc_01.jpg');
+      background-image: url('./simple-oh-my-gallery/src/bg_pc_01.jpg');
+    }
+  }
+  .md\:bg-\[url\(\'\.\/src\/bg_pc_01\.jpg\'\)\] {
+    @media (width >= 48rem) {
+      background-image: url('./src/bg_pc_01.jpg');
+    }
+  }
+  .md\:bg-\[url\(\'\/simple-oh-my-gallery\/src\/bg_pc_01\.jpg\'\)\] {
+    @media (width >= 48rem) {
+      background-image: url('/simple-oh-my-gallery/src/bg_pc_01.jpg');
     }
   }
   .md\:text-5xl {
@@ -380,10 +354,6 @@
   initial-value: solid;
 }
 @property --tw-font-weight {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-tracking {
   syntax: "*";
   inherits: false;
 }
@@ -534,7 +504,6 @@
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
       --tw-font-weight: initial;
-      --tw-tracking: initial;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
       --tw-shadow-alpha: 100%;
