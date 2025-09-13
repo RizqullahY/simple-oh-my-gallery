@@ -1,0 +1,13 @@
+body {
+  background-image: url('../src/bg_mb_01.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: rgba(0,0,0,0.6); /* efek overlay */
+  background-blend-mode: overlay;
+}
+@media (min-width: 768px) {
+  body {
+    background-image: url('../src/bg_pc_01.jpg');
+  }
+}
