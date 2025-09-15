@@ -2,12 +2,14 @@ const repoOwner = "RizqullahY";
 const repoName = "simple-oh-my-gallery";
 const gallery = document.getElementById("gallery");
 const refreshBtn = document.getElementById("refreshBtn");
+const addBtn = document.getElementById("addBtn");
 
 // Load images
 async function loadImages() {
   gallery.innerHTML = ""; // reset sebelum render ulang
+
   const response = await fetch(
-    `https://api.github.com/repos/${repoOwner}/${repoName}/contents/images`
+    `https://api.github.com/repos/${repoOwner}/${repoName}/contents/images?ts=${Date.now()}`
   );
   const files = await response.json();
 
@@ -52,14 +54,11 @@ refreshBtn.addEventListener("click", () => {
   loadImages();
 });
 
-// Refresh button
+// Add button
 addBtn.addEventListener("click", () => {
   window.open(
     `https://github.com/${repoOwner}/${repoName}/upload/master/images`,
     "_blank"
-
-    // https://github.com/RizqullahY/simple-oh-my-gallery/upload/master/images
-  
   );
 });
 
